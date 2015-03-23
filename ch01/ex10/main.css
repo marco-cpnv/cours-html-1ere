@@ -1,0 +1,19 @@
+/* 
+ * utilisez ce fichier en ajoutant la balise suivante dans la section <head> de
+ * votre document html :
+ * <link rel="stylesheet" type="text/css" href="main.css">
+ */
+table {
+    border-collapse: collapse;
+    border: solid thick;
+}
+colgroup, tbody {
+    border: solid medium;
+}
+td {
+    border: solid thin;
+    height: 1.4em;
+    width: 1.4em;
+    text-align: center;
+    padding: 0;
+}
