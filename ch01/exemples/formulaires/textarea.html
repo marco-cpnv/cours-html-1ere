@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Auteur : Christophe Lambercy <christophe.lambercy@cpnv.ch>
+Date : 2015-04-19
+Licence : https://www.gnu.org/copyleft/gpl.html
+
+Ce fichier est un exemple d'utilisation de la balise <textarea>. Il ne s'agit
+pas d'un exemple complet de formulaire et ne doit pas être utilisé en
+production.
+-->
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>La balise form</title>
+  </head>
+  <body>
+    <form method="post" action="unscript.php">
+      
+      <!--
+        maxlength est le nombre de caractère maximum autorisé par le textarea.
+
+        minlength n'est pas supporté quand bien même il est spécifié dans la
+        spéc.
+        
+        cols et rows sont des indications pour le navigateur permettant
+        d'afficher le textarea.
+
+        L'attribut wrap ne peut prendre que deux valeurs : hard ou soft. La
+        valeur par défaut si l'attribut n'est pas spécifié est soft. Si
+        wrap=hard, des retours à la ligne sont automatiquement ajoutés lors de
+        l'envoi du formulaire afin que le texte corresponde à ce qui est
+        affiché dans le textarea. Si wrap=soft, aucun retour à la ligne n'est
+        ajouté lors de l'envoi.
+      -->
+      <label>Votre SMS
+        <textarea maxlength="140" minlength="10" name="sms" cols="20" rows="4" wrap="hard"></textarea>
+      </label>
+
+      <br>
+
+      <label>Votre message
+        <textarea maxlength="100" minlength="10" name="comments" cols="20" rows="6" wrap="soft"></textarea>
+      </label>
+    
+      <br>
+      
+      <input type="submit" name="submit" value="Envoyer">
+    </form>
+  </body>
+</html>

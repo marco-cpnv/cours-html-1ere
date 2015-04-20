@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+Auteur : Christophe Lambercy <christophe.lambercy@cpnv.ch>
+Date : 2015-04-19
+Licence : https://www.gnu.org/copyleft/gpl.html
+
+Ce fichier est un exemple d'utilisation de label dans un formulaire. Il ne
+s'agit pas d'un exemple complet de formulaire et ne doit pas être utilisé en
+production.
+-->
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>La balise form</title>
+  </head>
+  <body>
+    <form method="post" action="unscript.php">
+      
+      <!-- 
+        Ajouter un label associé à l'input est une très bonne pratique car cela
+        facilite l'utilisation de votre formulaire. Lorsque l'utilisateur
+        clique sur le label, cela aura pour effet de sélectionner le contrôle
+        correspondant.
+      -->
+      <label>
+        Votre nom : <input type="text" name="username">
+      </label>
+      <br>
+
+      <label>
+        Votre age : <input type="number" name="age" min="16" max="30">
+      </label>
+      <br>
+      
+      <!--
+        C'est encore plus intéressant pour les cases à cocher (checkboxes) ou
+        les boutons radio (radio)
+      -->
+      <label>
+        Newsletter : <input type="checkbox" name="newsletter" value="yes">
+      </label>
+      <br>
+      <label>
+        Recevoir des spams : <input type="checkbox" name="spam" value="yes">
+      </label>
+      <br>
+
+      <!--
+        A noter que le texte du label peut être avant ou après le contrôle
+      -->
+      <label>
+        <input type="checkbox" name="agree" value="1">Je suis d'accord
+      </label>
+      <br>
+
+      <!-- 
+        Sans label, il faut impérativement cliquer sur le petit carré, ce qui
+        est pénible à l'utilisation.
+      -->
+      <input type="checkbox" name="nolabel_nofuture" value="1">Je n'ai pas de label ...
+      <br>
+
+      <!--
+        Exemple avec des boutons radio
+      -->
+      <p>
+        <label>
+          <input type="radio" name="like" value="1" checked="checked"> Like
+        </label>
+        <label>
+          <input type="radio" name="like" value="0"> Don't like
+        </label>
+      </p>
+
+      <input type="submit" name="submit" value="Envoyer">
+    </form>
+  </body>
+</html>

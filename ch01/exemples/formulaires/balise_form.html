@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Auteur : Christophe Lambercy <christophe.lambercy@cpnv.ch>
+Date : 2015-04-19
+Licence : https://www.gnu.org/copyleft/gpl.html
+
+Ce fichier est un exemple d'utilisation de la balise <form>. Il ne s'agit pas
+d'un exemple complet de formulaire et ne doit pas être utilisé en production.
+-->
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>La balise form</title>
+  </head>
+  <body>
+    <!--
+      Tous les formulaires doivent être dans des balises form. La propriété
+      "method" détermine la façon dont les données sont envoyées au serveur.
+      Dans la plupart des cas, ce sera "post". La propriété action permet de
+      spécifier le script qui sera appelé sur le serveur et qui utilisera les
+      données contenues dans notre formulaire (unscript.php affiche tous les
+      paramètre POST qui lui sont donnés).
+    -->
+    <form method="post" action="unscript.php">
+      
+      
+      <!--
+        Dans le formulaire, on va ajouter des contrôles qui permettent à
+        l'utilisateur d'entrer des informations et au script serveur de les
+        récupérer. Nous verrons que les attributs type et name de la balise
+        input sont obligatoires.
+      -->
+      
+      Votre nom : <input type="text" name="username">
+      <br>
+      Votre age : <input type="number" name="age" min="16" max="30">
+      <br>
+        
+      <!--
+        La plupart du temps, un formulaire affiche un bouton qui permet
+        d'envoyer les informations. Lorsqu'on clique dessus, le navigateur
+        appelle le script spécifié dans la propriété action de la balise form.
+      -->
+      <input type="submit" name="submit" value="Envoyer">
+    </form>
+  </body>
+</html>

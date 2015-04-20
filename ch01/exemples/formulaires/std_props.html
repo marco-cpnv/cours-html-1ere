@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+Auteur : Christophe Lambercy <christophe.lambercy@cpnv.ch>
+Date : 2015-04-19
+Licence : https://www.gnu.org/copyleft/gpl.html
+
+Ce fichier est un exemple d'utilisation des propriétés standards des contrôles
+de formulaire. Il ne s'agit pas d'un exemple complet de formulaire et ne doit
+pas être utilisé en production.
+-->
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>La balise form</title>
+  </head>
+  <body>
+    <form method="post" action="unscript.php">
+      
+      
+      <!--
+        required : le champs est obligatoire, il doit contenir quelque chose !
+      -->
+      <label>
+        Votre nom : <input type="text" name="username" required>
+      </label>
+      <br>
+
+      <!--
+        Disabled désactive un contrôle. Il est alors impossible d'entrer
+        quelque chose. De plus, la valeur n'est pas passée dans le POST
+      -->
+      <label>
+        Je veux partir : <input type="text" name="cestlheure" value="Non" disabled>
+      </label>
+      <br>
+
+      <!--
+        Readonly empêche l'utilisateur de modifier le contenu d'un contrôle.
+      -->
+      <label>
+        J'adore l'informatique : <input type="text" name="jadorelinfo" value="Oh OUI" readonly>
+      </label>
+      <br>
+
+        
+      <!--
+        size permet de spécifier le nombre minimum de caractères qui seront
+        visible lors de l'affichage du contrôle. A noter que cela ne limite en
+        rien le nombre de caractères que l'utilisateur peut entrer et qu'il
+        s'agit. Si non spécifié, le défaut est 20.
+
+        La chasse des lettres rends cette propriété très aléatoire. Essayer par
+        exemple avec m et vous verrez que vous n'arrivez pas, dans certains
+        cas, à en mettre 10. il est conseillé d'utiliser plutôt CSS pour
+        spécifier la largeur des input.
+      -->
+      <label>
+        Size = 10 &rarr; minimum 10 caractères visibles : <input type="text" name="sms" size="10">
+      </label>
+      <br>
+
+      <!--
+        L'attribut placeholder permet d'afficher un texte qui diparaîtra dès
+        que l'utilisateur tappera quelque chose. Cela est utile pour donner une
+        indication à l'utilisateur sur la façon dont il doit renseigner le
+        champ.
+      -->
+      <label>
+        Date : <input type="text" name="date" placeholder="AAAA-MM-JJ">
+      </label>
+      <br>
+
+      <!--
+        Pattern permet permet de spécifier le format accepté pour un champ. Par
+        exemple, dans l'exemple ci-dessous, on utilise pattern pour vérifier
+        que l'utilisateur a entré son NAVS13 correctement.
+      -->
+      <label>
+        NAVS13 (756.1234.5678.97) : 
+        <input type="text" 
+               name="birthdate"
+               placeholder="756.1234.5678.97"
+               pattern="\d{3}.\d{4}.\d{4}.\d{2}">
+      </label>
+      <br>
+
+      <input type="submit" name="submit" value="Envoyer">
+    </form>
+  </body>
+</html>
