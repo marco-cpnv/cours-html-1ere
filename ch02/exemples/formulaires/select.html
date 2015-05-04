@@ -14,7 +14,7 @@ d'un exemple complet de formulaire et ne doit pas être utilisé en production.
   </head>
   <body>
     <form method="post" action="unscript.php">
-      
+
       <label for="country">Pays :</label>
       <!--
         Select permet de définir une liste déroulante. Les valeurs
@@ -23,14 +23,13 @@ d'un exemple complet de formulaire et ne doit pas être utilisé en production.
         lorsque le formulaire est envoyé.
       -->
       <select id="country" name="country" required>
-        <!-- 
+        <!--
           Il est parfois nécessaire, lorsqu'un choix par défaut n'est pas
           possible, d'utiliser une option fictive, comme c'est le cas
           ci-dessous. Le script recevant les données doit bien évidemment
-          prendre ceci en considération. La présence de required dans le select
-          ainsi que l'attribut value="" force l'utilisateur à choisir une
-          valeur dans la liste.
-
+          prendre ceci en considération. La présence de required dans le
+          select ainsi que l'attribut value="" force l'utilisateur à
+          choisir une valeur dans la liste.
         -->
         <option value=""> Sélectionnez un pays </option>
         <option value="DE"> Allemagne </option>
@@ -43,12 +42,12 @@ d'un exemple complet de formulaire et ne doit pas être utilisé en production.
       </select>
 
       <br>
-      
+
       <label for="unittype">Type d'unité</label>
       <!--
-        Par défaut, la première option est sélectionnée par défaut, mais cela
-        peut être modifié grâce à l'attribut selected. Dans le cas ci-dessous,
-        Jedi sera sélectionné par défaut.
+        Par défaut, la première option est sélectionnée par défaut, mais
+        cela peut être modifié grâce à l'attribut selected. Dans le cas
+        ci-dessous, Jedi sera sélectionné par défaut.
       -->
       <select id="unittype" name="unittype">
         <option value="1"> Chevalier </option>
@@ -65,9 +64,9 @@ d'un exemple complet de formulaire et ne doit pas être utilisé en production.
       <label for="artist">Mes artistes préféré(e)s</label>
       <!--
         L'attribut multiple du select permet à l'utilisateur de choisir
-        plusieurs entrées. A noter qu'il est nécessaire d'ajouter [] au nom de
-        l'attribut name du select afin de permettre aux scripts serveurs (PHP
-        et autres) d'utiliser ce résultat.
+        plusieurs entrées. A noter qu'il est nécessaire d'ajouter [] au
+        nom de l'attribut name du select afin de permettre aux scripts
+        serveurs (PHP et autres) d'utiliser ce résultat.
       -->
       <select id="artist" name="artist[]" multiple>
         <option value="1"> Mogwai </option>
@@ -82,6 +81,7 @@ d'un exemple complet de formulaire et ne doit pas être utilisé en production.
       <br>
 
       <input type="submit" name="submit" value="Envoyer">
+
     </form>
   </body>
 </html>
