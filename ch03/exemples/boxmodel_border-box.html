@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test Box-sizing: border-box</title>
+    <style>
+
+p {
+  width: 50%;
+  text-align: justify;
+
+  /*
+    Sans bordure ni padding, l'affichage est correct, c'est à dire sur deux
+    colonnes (ouvrez ce fichier dans votre navigateur pour le constatez par
+    vous même).
+
+    Par contre, si vous ajoutez une bordure ou du padding, l'affichage ne
+    fonctionnera plus car chacune des box fera plus que 50% en taille (le
+    contenu fera bien 50%, mais il faut ajouter la taille de la bordure et du
+    padding) donc il sera impossible d'afficher les deux colonnes.  Pour vous
+    en rendre compte, essayez de décommenter la ligne ci-dessous (border) et
+    afficher le contenu dans un navigateur.
+   */
+  /*
+  border: 1px solid red;
+  padding: 10px;
+  */
+
+
+  /*
+    box-sizing est supporté par tous les navigateurs et permet d'inclure le
+    padding et la bordure dans la taille de la boîte. Je vous conseille
+    d'utiliser ce modèle car il est supporté par tous les navigateurs (les
+    versions récentes).
+
+    Décommentez cette ligne (ou les sélecteurs html et *, *:before, *:after
+    ci-dessous pour modifier la façon dont les tailles sont calculées.
+   */
+  /*
+  box-sizing: border-box;
+  */
+}
+
+p#first {
+  float: left;
+}
+
+p#second {
+  float: right;
+}
+
+/*
+  Un bon CSS Reset devrait modifier le box-sizing de cette manière.
+ */
+ /*
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*/
+
+    </style>
+  </head>
+  <body>
+    <p id="first">
+      On sait depuis longtemps que travailler avec du texte lisible et contenant du
+      sens est source de distractions, et empêche de se concentrer sur la mise en
+      page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du
+      texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus
+      ou moins normale, et en tout cas comparable avec celle du français standard. De
+      nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait
+      du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum'
+      vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de
+      construction. Plusieurs versions sont apparues avec le temps, parfois par
+      accident, souvent intentionnellement (histoire d'y rajouter de petits clins
+      d'oeil, voire des phrases embarassantes).
+    </p>
+    <p id="second">
+      On sait depuis longtemps que travailler avec du texte lisible et contenant
+      du sens est source de distractions, et empêche de se concentrer sur la mise
+      en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme
+      'Du texte. Du texte. Du texte.' est qu'il possède une distribution de
+      lettres plus ou moins normale, et en tout cas comparable avec celle du
+      français standard. De nombreuses suites logicielles de mise en page ou
+      éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut,
+      et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites
+      qui n'en sont encore qu'à leur phase de construction. Plusieurs versions
+      sont apparues avec le temps, parfois par accident, souvent
+      intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des
+      phrases embarassantes).
+    </p>
+  </body>
+</html>
