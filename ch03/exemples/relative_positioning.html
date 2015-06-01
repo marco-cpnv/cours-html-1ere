@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Position relative</title>
+    <style>
+
+/* 
+   Les deux règles suivantes permettent de spécifier la taille 
+   d'un élément non pas par son contenu, mais son contenu, plus 
+   le padding, plus la bordure.
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+div {
+  border: 1px solid black;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#box1 {
+  width: 200px;
+  height: 200px;
+}
+
+#box2 {
+  width: 100px;
+  height: 100px;
+}
+
+#box3 {
+  width: 150px;
+  height: 150px;
+
+  /*
+     Cet élément est déplacé de 50px vers le base, et 150px
+     vers la droite par rapport à sa position normale.
+   */
+  position: relative;
+  top: 50px;
+  left: 150px;
+}
+    </style>
+  </head>
+  <body>
+    <div id="box1">Box 1</div>
+    <div id="box2">Box 2</div>
+    <div id="box3">Box 3</div>
+  </body>
+</html>

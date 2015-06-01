@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Floating</title>
+    <style>
+
+/* 
+   Les deux règles suivantes permettent de spécifier la taille 
+   d'un élément non pas par son contenu, mais son contenu, plus 
+   le padding, plus la bordure.
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+div {
+  padding: 10px;
+  border: 1px dashed black;
+  margin: 5px;
+  float: left;
+}
+
+#box1 {
+  width: 60px;
+  height: 100px;
+}
+
+#box2 {
+  width: 100px;
+  height: 20px;
+}
+
+#box3 {
+  width: 50px;
+  height: 150px;
+}
+
+#box4 {
+  width: 20px;
+  height: 50px;
+}
+
+#box5 {
+  width: 150px;
+  height: 120px;
+}
+
+#box6 {
+  width: 120px;
+  height: 70px;
+}
+
+#box7 {
+  width: 25px;
+  height: 80px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="box1">1</div>
+    <div id="box2">2</div>
+    <div id="box3">3</div>
+    <div id="box4">4</div>
+    <div id="box5">5</div>
+    <div id="box6">6</div>
+    <div id="box7">7</div>
+  </body>
+</html>
